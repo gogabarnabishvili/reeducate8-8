@@ -1,0 +1,358 @@
+.exer2 {
+    margin-top: 300px;
+}
+
+p {
+    margin-bottom: 50px;
+}
+
+
+/* 
+================================
+A sample transition.
+Click on the large ball on the left to see the animation.
+*/
+
+.anim:active .ball-one {
+    left: 150px;
+    transition: left .5s ease-in;
+}
+
+
+/* 
+  ================================
+  Your code here! 
+  Make the small ball on the right roll to the right when the large one hits it.
+  
+  */
+
+.anim:active .ball-two {
+    transition-duration: 0.7s;
+    transition-delay: 0.4s;
+}
+
+.anim:active .ball-two {
+    margin-left: 150px;
+    /* Hint: manipulate margin-left to roll it, just like with the ball-one above. */
+    /* Double hint: Don't forget about transition-delay! */
+}
+
+
+/* 
+  ================================
+  Necessary CSS Below-- no need to edit */
+
+.ball-one {
+    background: #ff97C0;
+    border-radius: 50%;
+    position: absolute;
+    top: 100px;
+    left: 00px;
+    width: 200px;
+    height: 200px;
+}
+
+.ball-two {
+    background: #0097C0;
+    border-radius: 50%;
+    position: absolute;
+    top: 200px;
+    left: 300px;
+    width: 100px;
+    height: 100px;
+}
+
+
+/* exercises 2 */
+
+.exercises-2 {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition-duration: 2s;
+}
+
+.exercises-2:hover {
+    width: 300px;
+}
+
+
+/* exercises-3 */
+
+div.one {
+    width: 100px;
+    height: 100px;
+    background: red;
+}
+
+div.two {
+    width: 100px;
+    height: 100px;
+    background: blue;
+}
+
+div#main:hover .one {
+    width: 300px;
+    transition: 1s;
+}
+
+div#main:hover .two {
+    width: 300px;
+    transition: 1s 1s;
+}
+
+
+/* exercises-4 */
+
+div#main1 {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    margin: auto;
+}
+
+div#main1 .content {
+    position: absolute;
+    text-align: center;
+    width: 200px;
+    top: 50%;
+    transform: translate(0 -50%);
+    font-size: 24pt;
+}
+
+div#main1 .topleft {
+    display: inline-block;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 0px;
+    left: 0px;
+    background: red;
+    transition: 2s;
+}
+
+div#main1 .topright {
+    display: inline-block;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 0px;
+    left: 100px;
+    background: yellow;
+    transition: 2s;
+}
+
+div#main1 .bottomleft {
+    display: inline-block;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 0px;
+    top: 100px;
+    background: blue;
+    transition: 2s;
+}
+
+div#main1 .bottomright {
+    display: inline-block;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 100px;
+    top: 100px;
+    background: green;
+    transition: 2s;
+}
+
+div#main1:hover .topleft {
+    transition: 2s;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+
+div#main1:hover .topright {
+    transition: 2s;
+    transform: rotate(-90deg);
+    transform-origin: top right;
+}
+
+div#main1:hover .bottomleft {
+    transition: 2s;
+    transform: rotate(-90deg);
+    transform-origin: left bottom;
+}
+
+div#main1:hover .bottomright {
+    transition: 2s;
+    transform: rotate(90deg);
+    transform-origin: bottom right;
+}
+
+
+/* exercises-5 */
+
+.exercises5 {
+    position: relative;
+    width: 600px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.box {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transition: 2s;
+}
+
+
+/* exercises-6 */
+
+div#loader {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    margin: auto;
+}
+
+div#loader .red {
+    display: inline-block;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: red;
+    opacity: 0.75;
+    transform-origin: 50% 50%;
+    animation: rotating 3s infinite;
+}
+
+div#loader .green {
+    display: inline-block;
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    top: 12.5px;
+    left: 12.5px;
+    background: green;
+    opacity: 0.75;
+    transform-origin: 50% 50%;
+    animation: rotating 4s infinite;
+}
+
+div#loader .blue {
+    display: inline-block;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 25px;
+    left: 25px;
+    background: blue;
+    transform-origin: 50% 50%;
+    animation: rotating 5s infinite;
+}
+
+@keyframes rotating {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading .blue {
+    animation-play-state: paused !important;
+}
+
+.loading .red {
+    animation-play-state: paused !important;
+}
+
+.loading .green {
+    animation-play-state: paused !important;
+}
+
+
+/* exercises-7 */
+
+
+/* exercises-8 */
+
+.exercise-8 {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    position: relative;
+    background-color: white;
+}
+
+.deck {
+    position: relative;
+    left: 50%;
+    width: 250px;
+    height: 300px;
+    transform: translateX(-50%);
+    border: none;
+}
+
+.card {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: inherit;
+    height: inherit;
+    transform-origin: left bottom;
+    border: none;
+    outline: none;
+}
+
+.card img {
+    width: inherit;
+    height: inherit;
+    border: none;
+}
+
+.card:hover {
+    outline: 3px solid red;
+}
+
+.deck:hover .card:nth-child(1) {
+    transform: rotate(-40deg);
+    transition: 1s;
+}
+
+.deck:hover .card:nth-child(1):hover {
+    transform: scale(1.2, 1.2) rotate(-40deg);
+}
+
+.deck:hover .card:nth-child(2) {
+    transform: rotate(-30deg);
+    transition: 1s;
+}
+
+.deck:hover .card:nth-child(2):hover {
+    transform: scale(1.2, 1.2) rotate(-30deg);
+}
+
+.deck:hover .card:nth-child(3) {
+    transform: rotate(-20deg);
+    transition: 1s;
+}
+
+.deck:hover .card:nth-child(3):hover {
+    transform: scale(1.2, 1.2) rotate(-20deg);
+}
+
+.deck:hover .card:nth-child(4) {
+    transform: rotate(-10deg);
+    transition: 1s;
+}
+
+.deck:hover .card:nth-child(4):hover {
+    transform: scale(1.2, 1.2) rotate(-10deg);
+}
